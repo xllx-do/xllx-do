@@ -2747,41 +2747,23 @@
       }
     </style>
     <script>
-      // 自定义的账户和密码
-      const correctUsername = "xiaojiale";
-      const correctPassword = "030813";
+     function login() {
+        // 获取输入的用户名和密码
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
 
-      function checkLogin(username, password) {
-        // 这里假设你有一个API或者服务器端的验证逻辑
-        // 这里使用异步操作（例如AJAX）来模拟这个过程
-        // 以下是一个简化的示例，没有实际的请求
+        // 假设正确的用户名和密码
+        var correctUsername = "xiaojiale";
+        var correctPassword = "030813";
 
-        // 假设这是你的验证逻辑（实际上，它应该是服务器端的响应）
-        var isValid =
-         username === correctUsername && password === correctPassword
-          
-
-        if (isValid) {
+        // 验证用户名和密码
+        if (username === correctUsername && password === correctPassword) {
           // 登录成功，跳转到另一个页面
-          window.location.href = "首页.html"; // 替换为你想要跳转的页面URL
+          window.location.href = "success.html";
         } else {
-          // 登录失败，显示错误信息
-          alert("登录失败，请检查您的用户名和密码。");
+          // 登录失败，显示错误消息
+          alert("登录失败，请检查密码和用户名是否正确！！");
         }
-      }
-
-      // 示例：调用checkLogin函数
-      // 假设这是在一个表单提交事件处理器中
-      document
-        .getElementById("loginForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // 阻止表单的默认提交行为
-
-          var username = document.getElementById("usernameInput").value;
-          var password = document.getElementById("passwordInput").value;
-
-          checkLogin(username, password);
-        });
     </script>
   </head>
   <body>
@@ -3009,7 +2991,7 @@
         <button
           class="btn-login"
           type="button"
-          onclick="checkLogin(username,password)"
+          onclick="login()"
         >
           登录
         </button>

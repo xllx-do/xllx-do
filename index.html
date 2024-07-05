@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>公主请登录</title>
+    <title>登录页面</title>
     <style>
       .heart {
         position: fixed;
@@ -2747,7 +2747,7 @@
       }
     </style>
     <script>
-    function login() {
+      function login() {
         // 获取输入的用户名和密码
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
@@ -2973,29 +2973,13 @@
       <form>
         <div class="form-group">
           <label for="username">用户名:</label>
-          <input
-            type="text"
-            id="username"
-            placeholder="用户名"
-            required
-          />
+          <input type="text" id="username" placeholder="用户名" required />
         </div>
         <div class="form-group">
           <label for="password">密码:</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="密码"
-            required
-          />
+          <input type="password" id="password" placeholder="密码" required />
         </div>
-        <button
-          class="btn-login"
-          type="button"
-          onclick="login()"
-        >
-          登录
-        </button>
+        <button class="btn-login" type="button" onclick="login()">登录</button>
         <div class="error-message" id="error-message"></div>
       </form>
     </div>

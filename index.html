@@ -2757,9 +2757,9 @@
         var correctPassword = "030813";
 
         // 验证用户名和密码
-        if (username === correctUsername && password === correctPassword) {
+        if (username == correctUsername && password == correctPassword) {
           // 登录成功，跳转到另一个页面
-          window.location.href = "success.html";
+          window.location.href = "首页.html";
         } else {
           // 登录失败，显示错误消息
           alert("登录失败，请检查密码和用户名是否正确！！");

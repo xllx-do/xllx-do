@@ -2758,9 +2758,10 @@
 
         // 假设这是你的验证逻辑（实际上，它应该是服务器端的响应）
         var isValid =
-          username === correctUsername && password === correctPassword;
+          if(username === correctUsername && password === correctPassword)
+          isValid=1
 
-        if (isValid) {
+        if (isValid==1) {
           // 登录成功，跳转到另一个页面
           window.location.href = "首页.html"; // 替换为你想要跳转的页面URL
         } else {
